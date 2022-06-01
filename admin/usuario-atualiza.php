@@ -22,7 +22,11 @@ $usuario = lerUmUsuario($conexao, $id);
    /*  echo "senha no banco:" .$usuario['senha'];
     echo "<br>";
     echo "senha do formulario:" .$senha; */
-  }
+   atualizarUsuario($conexao, $id, $nome, $email, $senha, $tipo);
+   header("location:usuarios.php");
+
+    }
+  
 ?>
 <div class="row">
   <article class="col-12 bg-white rounded shadow my-1 py-4">

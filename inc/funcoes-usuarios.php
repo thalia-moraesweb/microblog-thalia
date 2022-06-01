@@ -42,7 +42,10 @@ function lerUsuarios(mysqli $conexao):array {
 
 
 // Função excluirUsuario: usada em usuario-exclui.php
-
+function excluirUsuario(mysqli $conexao, int $id){
+    $sql = "DELETE FROM usuarios WHERE id = $id";
+    mysqli_query($conexao, $sql) or die(mysqli_error($conexao));
+}
 // fim excluirUsuario
 
 
