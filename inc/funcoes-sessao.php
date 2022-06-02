@@ -39,3 +39,11 @@ function logout(){
     die(); //ou exit;
 }
 
+
+function verificaAcessoAdmin(){
+    if($_SESSION['tipo'] != 'admin') {
+        // Redirecione para a página não-autorizado
+        header("location:nao-autorizado.php");
+        die(); //ou exit;
+    }
+}
