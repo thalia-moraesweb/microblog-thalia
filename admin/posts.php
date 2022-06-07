@@ -6,13 +6,13 @@ require "../inc/funcoes-posts.php";
 $idUsuarioLogado = $_SESSION['id'];
 $tipoUsuarioLogado = $_SESSION['tipo'];
 
-$posts
-lerPosts($conexao, $idUsuarioLogado, $tipoUsuarioLogado);
+$posts = lerPosts($conexao, $idUsuarioLogado, $tipoUsuarioLogado);
+$quantidade = count($posts);
 
 ?>
 <div class="row">
   <article class="col-12 bg-white rounded shadow my-1 py-4">
-    <h2 class="text-center">Posts <span class="badge badge-primary">X</span></h2>
+    <h2 class="text-center">Posts <span class="badge badge-primary"><?=$quantidade?></span></h2>
     <p class="lead text-right">
       <a class="btn btn-primary" href="post-insere.php">Inserir novo post</a>
     </p>
@@ -39,7 +39,7 @@ lerPosts($conexao, $idUsuarioLogado, $tipoUsuarioLogado);
             <?php if($_SESSION['tipo'] == 'admin'){?>
             <td> <?=$post['autor']?> </td>
             <?php } ?>
-            
+
             <td class="text-center">
               <a class="btn btn-warning btn-sm" 
               href="post-atualiza.php?id=<?=$post['id']?>">
