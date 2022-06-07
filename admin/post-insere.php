@@ -3,7 +3,7 @@ require "../inc/cabecalho-admin.php";
 require "../inc/funcoes-posts.php";
 
 if(isset($_POST['inserir'])){ 
-  $titulo = filter_input(INPUT_POST, 'tituto', FILTER_SANITIZE_SPECIAL_CHARS);
+  $titulo = filter_input(INPUT_POST, 'titulo', FILTER_SANITIZE_SPECIAL_CHARS);
   $texto = filter_input(INPUT_POST, 'texto', FILTER_SANITIZE_SPECIAL_CHARS);
   $resumo = filter_input(INPUT_POST, 'resumo', FILTER_SANITIZE_SPECIAL_CHARS);
   /* UPLOAD DE IMAGEM */
@@ -57,5 +57,6 @@ if(isset($_POST['inserir'])){
 
     </article>
   </div>
-
 <?php require "../inc/rodape-admin.php"; ?> 
+
+function upload
