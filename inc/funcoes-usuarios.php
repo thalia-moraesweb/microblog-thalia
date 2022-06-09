@@ -71,7 +71,7 @@ function verificaSenha(string $senhaFormulario, string $senhaBanco){
          return $senhaBanco; // Mantemos como está ( a senha que já existia)
     } else {
         /* Mas se forem diferentes, então pegamos a senha 
-        digitada no fommulario e a codificamos antes de enviar para o banco. */
+        digitada no formulario e a codificamos antes de enviar para o banco. */
     return codificaSenha($senhaFormulario);
     }
 }

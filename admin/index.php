@@ -1,4 +1,6 @@
-<?php require "../inc/cabecalho-admin.php"; ?> 
+<?php 
+require "../inc/cabecalho-admin.php";
+ ?> 
     
         
     <article class="jumbotron bg-white shadow">

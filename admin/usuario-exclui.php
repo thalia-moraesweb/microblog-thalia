@@ -5,6 +5,6 @@ verificaAcesso();
 verificaAcessoAdmin();
 
 $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
-excluirpost($conexao, $id);
+excluirUsuario($conexao, $id);
 header("location:usuarios.php");
 ?>
